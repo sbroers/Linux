@@ -2,7 +2,7 @@
 # Powerline Installations Script für Ubuntu 18.04
 
 sudo apt update
-sudo apt install powerline fonts-powerline
+sudo apt install powerline fonts-powerline -y
 
 echo "# Powerline" >> /root/.bashrc
 echo "if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then" >> /root/.bashrc
