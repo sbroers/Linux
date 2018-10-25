@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Prozedur, um einen Countdown auf dem Bildschirm auszugeben
 typeset -i Zahl
 echo "Mit welcher Zahl soll der Countdown starten?"
