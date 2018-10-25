@@ -20,7 +20,6 @@ echo "POWERLINE_BASH_SELECT=1" >> /home/$USER/.bashrc
 echo "source /usr/share/powerline/bindings/bash/powerline.sh" >> /home/$USER/.bashrc
 echo "fi " >> /home/$USER/.bashrc
 
-cd /tmp
 mkdir -p ~/.fonts
 wget https://github.com/powerline/fonts/raw/master/LiberationMono/Literation%20Mono%20Powerline.ttf -O ~/.fonts/Liberation\ Mono\ Powerline.ttf
 wget https://github.com/powerline/fonts/raw/master/LiberationMono/Literation%20Mono%20Powerline%20Bold.ttf -O ~/.fonts/Liberation\ Mono\ Powerline\ Bold.ttf
