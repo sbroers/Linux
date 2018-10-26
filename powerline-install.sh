@@ -30,3 +30,5 @@ fc-cache -vf ~/.fonts
 source /home/$USER/.bashrc 2> /dev/null || source /root/.bashrc
 
 echo "Powerline wurde installiert"
+
+echo "Bitte das system neustarten!"
