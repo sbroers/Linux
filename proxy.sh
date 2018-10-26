@@ -3,10 +3,11 @@
 #
 # Als Root ausführen!
 #
-read -p "Bitte geben Sie Ihre Standort-Nr. ein:" eingabe
+echo "Proxyformat: http://000.000.000.000:3128"
+read -p "Bitte geben Sie Ihre Proxy Adresse ein:" eingabe
 #
-echo "export http_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
-echo "export https_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
-echo "export ftp_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
+echo "export http_proxy=$eingabe" >> /etc/environment
+echo "export https_proxy=$eingabe" >> /etc/environment
+echo "export ftp_proxy=$eingabe" >> /etc/environment
 #
 echo "Proxy einstellungen wurden erfolgreich übernommen!"
