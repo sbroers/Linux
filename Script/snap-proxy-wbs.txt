@@ -1,0 +1,14 @@
+sudo systemctl edit snapd.service
+
+
+[Service]
+Environment=http_proxy=http://10.140.XX.10:3128
+Environment=https_proxy=http://10.140.XX.10:3128
+
+oder
+
+sudo snap set system proxy.http=http://10.140.XX.10:3128
+sudo snap set system proxy.https=http://10.140.XX.10:3128
+
+sudo systemctl daemon-reload
+sudo systemctl restart snapd.service
