@@ -1,7 +1,7 @@
 apt update && apt upgrade -y
 echo 'GRUB_CMDLINE_LINUX="netcfg/do_not_use_netplan=true"' >> /etc/default/grub
 echo 'GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"' >> /etc/default/grub
-update grub
+update-grub
 rm /etc/netplan/*
 apt install ifupdown
 echo "auto lo" >> /etc/network/interfaces
