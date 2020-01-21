@@ -1,6 +1,6 @@
 #Script als Root ausführen!
 
-apt update && sudo apt -y install ntp ntpdate
+apt update && apt -y install ntp ntpdate
 timedatectl set-ntp off
 
 read -p "Wie lautet Ihre Standortnummer?:" so
