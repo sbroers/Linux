@@ -7,6 +7,6 @@ read -p "Wie lautet Ihre Standortnummer?:" so
 
 echo "server 10.140.$so.1 prefer iburst" >> /etc/ntp.conf"
 
-sed '/^pool/d' /etc/ntp.conf > /dev/null 2>&1
+sed -i '/^pool/d' /etc/ntp.conf
 
 systemctl restart ntp
