@@ -1,8 +1,12 @@
-sudo apt update && sudo apt -y install ntp ntpdate
-sudo timedatectl set-ntp off
+#Script als Root ausführen!
+
+apt update && sudo apt -y install ntp ntpdate
+timedatectl set-ntp off
 
 read -p "Wie lautet Ihre Standortnummer?:" so
 
-sudo echo "server 10.140.$so.1 prefer iburst" >> /etc/ntp.conf"
+echo "server 10.140.$so.1 prefer iburst" >> /etc/ntp.conf"
 
-sudo systemctl restart ntp
+sed '/^pool/d' /etc/ntp.conf > /dev/null 2>&1
+
+systemctl restart ntp
