@@ -1,5 +1,31 @@
 # enhanced-session-mode debian 10
 
+apt-get install hyperv-daemons
+echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
+
+#cdrom aus sources.list entfernen
+
+apt update
+sudo apt install -t buster-backports linux-image-amd64
+
+sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
+
+wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xrdp/0.9.12-1/xrdp_0.9.12.orig.tar.gz
+
+echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
+echo "hv_vmbus" >> /etc/initramfs-tools/modules
+echo "hv_storvsc" >> /etc/initramfs-tools/modules
+echo "hv_blkvsc" >> /etc/initramfs-tools/modules
+echo "hv_netvsc" >> /etc/initramfs-tools/modules
+echo "hv_balloon" >> /etc/initramfs-tools/modules
+echo "hv_utils" >> /etc/initramfs-tools/modules
+
+cp -r /boot/efi/EFI/debian /boot/efi/EFI/BOOT
+cp /boot/efi/EFI/BOOT/shimx64.efi /boot/efi/EFI/BOOT/bootx64.efi
+
+export PATH=/sbin:$PATH
+
+update-initramfs
 
 wget http://de.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.12-1_amd64.deb
 wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8_8c-2ubuntu8_amd64.deb
