@@ -11,3 +11,17 @@ mate-session # Works
 #gnome-session --session=gnome-flashback-metacity --disable-acceleration-check & gnome-panel # Works
 #xfce4-session # Works
 EOF
+
+polkit.addRule(function(action, subject) {
+   if ((action.id == "org.freedesktop.color-manager.create-device" ||
+        action.id == "org.freedesktop.color-manager.create-profile" ||
+        action.id == "org.freedesktop.color-manager.delete-device" ||
+        action.id == "org.freedesktop.color-manager.delete-profile" ||
+        action.id == "org.freedesktop.color-manager.modify-device" ||
+        action.id == "org.freedesktop.color-manager.modify-profile") &&
+        subject.isInGroup("vglusers")) {
+      return polkit.Result.YES;
+   }
+});
+
+# Then restart policy kit
