@@ -2,10 +2,10 @@
 
 apt-get install hyperv-daemons
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
-
+apt update
 #cdrom aus sources.list entfernen
 
-apt update
+
 sudo apt install -t buster-backports linux-image-amd64
 
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
@@ -27,9 +27,9 @@ export PATH=/sbin:$PATH
 
 update-initramfs -u
 
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.12-1_amd64.deb
 wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8_8c-2ubuntu8_amd64.deb
 wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_2.0.3-0ubuntu1_amd64.deb
+wget http://de.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.12-1_amd64.deb
 
 dpkg -i *
 
