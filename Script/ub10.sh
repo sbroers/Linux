@@ -22,14 +22,6 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
-#apt update && apt upgrade -y
-
-if [ -f /var/run/reboot-required ]; then
-    echo "A reboot is required in order to proceed with the install." >&2
-    echo "Please reboot and re-run this script to finish the install." >&2
-    exit 1
-fi
-
 ###############################################################################
 # XRDP
 #
