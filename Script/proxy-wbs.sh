@@ -8,6 +8,7 @@ read -p "Bitte geben Sie Ihre Standort-Nr. ein:" eingabe
 echo "export http_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
 echo "export https_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
 echo "export ftp_proxy=http://10.140.$eingabe.10:3128" >> /etc/environment
+echo "export no_proxy=localhost,127.0.0.1,::1" >> /etc/environment
 #
 echo "Proxy einstellungen wurden erfolgreich übernommen!"
 echo "Bitte das System neustarten"
