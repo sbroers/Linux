@@ -1,3 +1,4 @@
 #!/bin/bash
-cat /etc/network/interfaces | grep dns-nameservers >> /etc/resolv.conf
+cat /etc/network/interfaces | grep dns-nameservers > /etc/resolv.conf
 sed -i s/'  dns-nameservers'/nameserver/g /etc/resolv.conf
+echo 'search wbstraining.intern' >> /etc/resolv.conf
