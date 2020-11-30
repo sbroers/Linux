@@ -1,4 +1,3 @@
 #!/bin/bash
-echo 127.0.0.1 > /etc/resolv.conf
 cat /etc/network/interfaces | grep dns-nameservers >> /etc/resolv.conf
 sed -i s/'  dns-nameservers'/nameserver/g /etc/resolv.conf
