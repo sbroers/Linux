@@ -1,7 +1,6 @@
 #!/bin/bash
 
 wget http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga-core_1.2.4-4build1_amd64.deb
-wget http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga_1.2.4-1_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga-bgpd_1.2.4-4build1_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga-isisd_1.2.4-4build1_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/q/quagga/quagga-ospf6d_1.2.4-4build1_amd64.deb
